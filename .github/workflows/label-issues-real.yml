@@ -4,11 +4,13 @@ on:
     types:
       - opened
 
-permissions:
-  issues: write  # 👈 This is required to add labels to issues
+# permissions:
+#   issues: write  # 👈 This is required to add labels to issues
 
 jobs:
   assign-label:
+    permissions:
+        issues: write  # 👈 This is required to add labels to issues
     runs-on: ubuntu-latest
     steps:
       - name: Assign label
