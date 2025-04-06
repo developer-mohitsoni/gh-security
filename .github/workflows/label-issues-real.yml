@@ -3,6 +3,10 @@ on:
   issues:
     types:
       - opened
+
+permissions:
+  issues: write  # 👈 This is required to add labels to issues
+
 jobs:
   assign-label:
     runs-on: ubuntu-latest
